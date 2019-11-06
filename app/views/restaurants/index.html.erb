@@ -1,0 +1,8 @@
+<div class="container">
+<h1>Restaurants List</h1>
+<% @restaurants.each do |res| %>
+<h3><%= link_to res.name, restaurant_path(res.id) %></h3>
+<% end %>
+<hr>
+<h3><i class="fas fa-plus"></i> <%= link_to "Create a new restaurant", new_restaurant_path %></h3>
+</div>
